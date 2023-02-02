@@ -28,4 +28,7 @@
 1. Добавлены линки.  
 2. Настроены access и trunk порты.  
 3. Настроен RPVST.  
-4. 
+4. [Bridge Priority](scr/1.png)  
+5. Добавлено, один в BLK.  
+6. LACP собран.   
+7. [LACP](scr/2.png) 
