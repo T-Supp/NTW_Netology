@@ -57,26 +57,29 @@
 
 В данной топологии проблема в том, что Area0 получилась разорванной.  
 Согласно RFC по OSPF, роутер ABR не может передавать LSA Type3, если он получен не из магистральной зоны.  
-Здесь ABR - R3. Поэтому маршруты R1 из Area0 к R3 не придут.    
+Поэтому маршруты R1 из Area0 к R3 не придут, а так же от R3 к R1.  
 
 <details>  
 <summary>R1</summary>  
 
-![1](scr/R1.png)   
+![1-1](scr/R1-1.png)   
+![1-2](scr/R1-2.png)  
 
 </details>
 
 <details>  
 <summary>R2</summary>  
 
-![2](scr/R2.png)   
-
+![2-1](scr/R2-1.png)  
+![2-2](scr/R2-2.png)  
+ 
 </details>
 
 <details>  
 <summary>R3</summary>  
 
-![3](scr/R3.png)   
+![3-1](scr/R3-1.png)   
+![3-2](scr/R3-2.png)  
 
 </details>
 
