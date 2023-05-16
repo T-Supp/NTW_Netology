@@ -132,7 +132,8 @@ ssh timeout 5
 
 <details>  
 <summary>Корректировка ACL МСЭ</summary>  
-!  
+
+!   
 access-list OUTSIDE extended permit icmp 10.10.10.0 255.255.255.0 192.168.0.0 255.255.0.0  
 access-list OUTSIDE extended permit tcp 10.10.10.0 255.255.255.0 192.168.3.0 255.255.255.0 eq www   
 access-list PRINTER extended deny ip any any  
@@ -147,4 +148,5 @@ access-group OUTSIDE in interface OUTSIDE
 access-group HTTP_TO_DMZ in interface DMZ  
 access-group INSIDE in interface INSIDE  
 !  
+
 </details>
