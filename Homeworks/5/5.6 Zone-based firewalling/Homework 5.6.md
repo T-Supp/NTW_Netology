@@ -125,3 +125,26 @@ telnet timeout 5
 ssh timeout 5  
 
 </details>
+
+### Доработка ДЗ  
+
+
+
+<details>  
+<summary>Корректировка ACL МСЭ</summary>  
+!  
+access-list OUTSIDE extended permit icmp 10.10.10.0 255.255.255.0 192.168.0.0 255.255.0.0  
+access-list OUTSIDE extended permit tcp 10.10.10.0 255.255.255.0 192.168.3.0 255.255.255.0 eq www   
+access-list PRINTER extended deny ip any any  
+access-list HTTP_TO_DMZ extended permit icmp 192.168.3.0 255.255.255.0 10.10.10.0 255.255.255.0   
+access-list INSIDE extended permit icmp 192.168.1.0 255.255.255.0 10.10.10.0 255.255.255.0  
+access-list INSIDE extended permit icmp 192.168.1.0 255.255.255.0 192.168.2.0 255.255.255.0  
+access-list INSIDE extended deny icmp 10.10.10.0 255.255.255.0 192.168.1.0 255.255.255.0
+!  
+!  
+access-group PRINTER in interface PRINTER  
+access-group OUTSIDE in interface OUTSIDE  
+access-group HTTP_TO_DMZ in interface DMZ  
+access-group INSIDE in interface INSIDE  
+!  
+</details>
